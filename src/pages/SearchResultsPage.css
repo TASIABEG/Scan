@@ -1,0 +1,310 @@
+/* Общие стили для страницы результатов поиска */
+.search-results-page {
+  background-color: transparent; /* Прозрачный фон */
+}
+
+.summary-section {
+  margin-bottom: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  overflow: hidden;
+  gap: 15px;
+}
+
+.carousel-item {
+  min-width: 200px;
+  padding: 15px;
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Секция заголовка */
+.search-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-header-text {
+  max-width: 60%;
+}
+
+.search-title {
+  font-family: 'Ferry', sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 48px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #000;
+  margin-left: 60px;
+}
+
+.search-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.2px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #000;
+  margin-left: 60px;
+}
+
+.search-header-image {
+  flex-shrink: 0;
+}
+
+/* Секция общей сводки */
+.summary-carousel-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Карточки карусели */
+.carousel-button {
+  width: 39px;
+  height: 39px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-button img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-button.left img {
+  transform: rotate(0deg);
+}
+
+.carousel-button.right img {
+  transform: rotate(0deg);
+}
+
+.summary-carousel-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Таблица с результатами */
+.summary-table {
+  min-width: 100%;
+  border-collapse: collapse;
+  border-style: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.summary-table-container::-webkit-scrollbar {
+  display: none;
+}
+
+.summary-table-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.summary-table td {
+  padding: 10px;
+  text-align: center;
+  border-right: 1px solid #029491;
+}
+
+/* Зафиксированные столбцы */
+.summary-table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: #029491;
+  color: white;
+}
+
+/* Окончание таблицы */
+.summary-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+/* Секция списка документов */
+.document-list {
+  margin-bottom: 40px;
+}
+
+.document-section {
+  margin-bottom: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.document-cards {
+  display: flex;
+  flex-wrap: wrap; /* Позволяет карточкам переноситься на новую строку */
+  justify-content: center;
+  position: relative;
+  gap: 15px;
+}
+
+.document-card {
+  width: 641px;
+  height: 694px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  padding: 20px 20px 10px 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Распределяем пространство между элементами */
+  position: relative; /* Для позиционирования .word-count */
+}
+
+.document-card:hover {
+  transform: translateY(-5px);
+}
+
+.document-card h3 {
+  font-family: 'Inter', sans-serif; /* Указываем шрифт */
+  font-weight: 500; /* Насыщенность шрифта */
+  font-size: 26px; /* Размер шрифта */
+  line-height: 31.47px; /* Межстрочный интервал */
+  letter-spacing: 0.02em; /* Межбуквенный интервал (2%) */
+  color: black; /* Цвет текста (для контраста с фоном) */
+  border-radius: 4px; /* Скругление углов (опционально) */
+  display: inline-block; /* Чтобы фон занимал только пространство текста */
+  margin-bottom: 2px; /* Уменьшаем отступ снизу */
+}
+
+.document-card ca {
+  background-color: #FFB64F;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-family: 'Inter', sans-serif; /* Указываем шрифт */
+  font-weight: 400; /* Насыщенность шрифта */
+  font-size: 12px; /* Размер шрифта */
+  line-height: 14.52px; /* Межстрочный интервал */
+  letter-spacing: 0.02em; /* Межбуквенный интервал (2%) */
+  padding: 4px 8px; /* Отступы внутри элемента (опционально) */
+  border-radius: 4px; /* Скругление углов (опционально) */
+  display: inline-block; /* Оставляем inline-block */
+  max-width: fit-content; /* Плашка занимает только ширину текста */
+}
+
+.document-card k {
+  font-family: 'Inter', sans-serif; /* Указываем шрифт */
+  font-weight: 400; /* Насыщенность шрифта */
+  font-size: 16px; /* Размер шрифта */
+  line-height: 19.36px; /* Межстрочный интервал */
+  letter-spacing: 0.02em; /* Межбуквенный интервал (2%) */
+  color: #949494; /* Цвет текста (для контраста с фоном) */
+  border-radius: 4px; /* Скругление углов (опционально) */
+  display: inline-block; /* Чтобы фон занимал только пространство текста */
+  margin-bottom: 25px;
+}
+
+.description-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Ограничиваем количество строк */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Добавляем многоточие */
+}
+
+media (max-width: 768px) {
+  .document-card {
+    width: calc(50% - 10px); /* На экранах меньше 768px карточки занимают половину ширины */
+  }
+}
+
+@media (max-width: 480px) {
+  .document-card {
+    width: 100%; /* На экранах меньше 480px карточки занимают всю ширину */
+  }
+}
+
+.document-card button {
+  background-color: #7CE3E1;
+  color: #000000;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: auto; /* Прижимает кнопку к нижнему краю */
+  align-self: flex-start; /* Выравнивание кнопки по левому краю */
+}
+
+.document-card button:hover {
+  background-color: #0056b3;
+}
+
+.document-image-wrapper {
+  position: relative;
+  width: 581px;
+  height: 158px;
+  margin: 15px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 581/158;
+}
+
+.document-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Кнопка "Показать больше" */
+.load-more {
+  text-align: center;
+}
+
+.load-more button {
+  background-color: #5970FF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px; /* Уменьшаем отступ снизу */
+}
+
+.load-more button:hover {
+  background-color: #0056b3;
+}
+
+.word-count {
+  align-self: flex-end; /* Выравниваем по правому краю */
+  margin-top: auto; /* Прижимаем к нижнему краю */
+  font-size: 14px;
+  color: #666;
+  margin-right: 10px; /* Отступ от правого края */
+  margin-bottom: 10px; /* Отступ от нижнего края */
+}

@@ -1,0 +1,233 @@
+/* Основные стили для формы */
+.registration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 0;  /* Убираем отступ сверху */
+  margin-bottom: 0;  /* Убираем отступ снизу */
+}
+
+.register-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;  /* Убираем отступы внутри */
+  box-sizing: border-box;
+}
+
+.text-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 40px;
+}
+
+.subscription-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Контейнер формы с отступами */
+.form-container {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-top: 0;  /* Убираем отступ сверху */
+  margin-bottom: 0;  /* Убираем отступ снизу */
+  box-sizing: border-box;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Стиль для меток и полей ввода */
+.register label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.register input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Кнопки */
+.btn-submit {
+  background-color: #5970FF;
+  color: white;
+  padding: 15px 25px; /* Увеличим размеры кнопок для лучшей видимости */
+  border: none;
+  border-radius: 8px; /* Сделаем скругления более заметными */
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px; /* Увеличиваем шрифт для лучшей видимости */
+  transition: background-color 0.3s ease; /* Добавим анимацию */
+}
+
+.btn-submit:hover {
+  background-color: #4a60e1; /* Цвет при наведении */
+}
+
+/* Ошибки */
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.login-link {
+  margin-top: 10px;
+}
+
+.login-link a {
+  text-decoration: underline;
+  color: #4CAF50;
+}
+
+/* Стили для кнопок */
+.form-buttons {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;  /* Убираем нижний отступ */
+  padding-bottom: 0;  /* Убираем нижний отступ */
+}
+
+.form-buttons button {
+  display: block;
+  width: 100%;
+  padding: 15px 25px; /* Увеличиваем размеры кнопок */
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  color: #ccc;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  font-size: 16px; /* Увеличиваем шрифт для лучшей видимости */
+}
+
+.form-buttons button:first-child {
+  margin-right: 20px;
+}
+
+.form-buttons button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+}
+
+/* Когда кнопка активна */
+.form-buttons button.active {
+  color: #029491;
+}
+
+.form-buttons button.active::after {
+  background-color: #029491;
+}
+
+/* Позиционирование картинки */
+.text-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Выравниваем содержимое по верхнему краю */
+  align-items: flex-start; /* Выравниваем по левому краю */
+  padding-right: 40px;
+  margin-top: 0; /* Убираем лишний отступ сверху */
+}
+
+.subscription-image {
+  max-width: 100%; /* Ограничиваем ширину изображения */
+  height: auto;
+  margin-top: 10px; /* Убираем лишний отступ сверху */
+  margin-bottom: 20px; /* Меньший отступ снизу */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  text-align: left; /* Выравниваем заголовок по левому краю */
+  margin-bottom: 10px; /* Убираем лишний отступ */
+}
+
+.form-image {
+  position: absolute;
+  top: -40px;
+  left: -60px;
+  width: 80px;
+  height: auto;
+  z-index: 10;
+}
+
+/* Убедитесь, что форма имеет позиционирование относительно */
+.form-container {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Остальные стили */
+.register-methods, .login-methods {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.register-methods span, .login-methods span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Стили для кнопок соцсетей */
+.social-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;  /* Уменьшаем промежуток между кнопками */
+  padding: 0;  /* Убираем отступы внутри контейнера */
+  margin: 0;  /* Убираем внешние отступы */
+}
+
+.social-buttons img {
+  width: 15%; /* Увеличиваем размер картинок для кнопок соцсетей */
+  height: 15%;
+  object-fit: contain; /* Сохраняем пропорции изображения */
+  cursor: pointer;
+  margin: 0;  /* Убираем внешние отступы */
+  padding: 0; /* Убираем внутренние отступы */
+}
+
+.social-buttons img:hover {
+  opacity: 0.7;
+}
+
+/* Восстановление пароля */
+.forgot-password {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.forgot-password a {
+  color: #5970FF;
+  text-decoration: underline;
+  font-weight: bold;
+}

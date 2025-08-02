@@ -36,3 +36,63 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/InterTight-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ferry';
+  src: url('./fonts/ferry_black.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Пример использования шрифтов */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ferry', sans-serif;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.header {
+  background: #009688;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.navigation a {
+  color: #fff;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.btn-login {
+  padding: 10px 20px;
+  background: #fff;
+  color: #009688;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-content {
+  text-align: center;
+  padding: 50px 20px;
+}
